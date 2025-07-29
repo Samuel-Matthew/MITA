@@ -116,7 +116,7 @@
 
 .highlight-box {
   background: white;
-  border-left: 5px solid var(--accent-color);
+  border-left: 5px solid #0066D6;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }

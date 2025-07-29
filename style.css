@@ -161,6 +161,7 @@ header nav #sign-up-btn {
 h2 {
     color: var(--accent-color);
     font-size: .8rem;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -189,7 +190,7 @@ h1 {
 }
 
 .hero h1 {
-        text-shadow: white 1px 1px 20px, #5BE3EA 1px 1px 10px;
+    /* text-shadow: white 1px 1px 2px, #5BE3EA 1px 1px 10px; */
     color: white;
 
 }
@@ -321,7 +322,7 @@ h1 {
 #hero .hero-img {
     display: none;
     grid-area: img;
-    background-color: blue;
+    /* background-color: blue; */
     height: 500px;
     width: 100%;
 }
@@ -410,7 +411,7 @@ h1 {
 #about .img img {
     width: 550px;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 #about .spec .spe {
@@ -426,133 +427,205 @@ h1 {
     font-size: .7rem;
 }
 
-#about .about-text {
-    width: 50%;
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: 70px;
-    text-align: justify;
-    /* background-color: green; */
-}
 
-#about .about-text p {
-    color: var(--secondary-color);
-    line-height: 23px;
-
-
-}
-
-#about ul {
-    list-style-type: circle;
-    color: var(--secondary-color);
+.about-text {
+    max-width: 900px;
     margin-left: 20px;
-    line-height: 27px;
-    font-size: large;
-    /* font-weight: 400; */
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
+
+.about-text h2 {
+    margin-top: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about-text h1 {
+    font-size: 40px;
+    /* font-weight: 800; */
+    margin-bottom: 13px;
+
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #374151;
+}
+
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.about-text li {
+    background-color: #f3f4f6;
+    border-left: 5px solid #0066D6;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.about-text li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+
 
 #featured {
-    max-width: 1200px;
-    width: 95vw;
-    margin: 30px auto;
+    width: 95%;
+    padding: 60px 20px;
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
     background-color: whitesmoke;
-    padding: 20px;
-    /* background: linear-gradient(to right, #5BE3EA, #0066D6); */
-
+    border-radius: 16px;
 }
 
+#featured h2 {
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#featured h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #111827;
+}
+
+/* Featured courses grid */
 .featured-courses {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, 265px);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
 }
 
-.featured-courses .course {
-    width: 100%;
-    /* height: 300px; */
-    display: flex;
-    padding: 10px;
-    background-color: white;
+/* Course card */
+#featured .course {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.featured-courses .course .img {
+#featured .course:hover {
+    transform: translateY(-5px);
+}
+
+/* Image and price tag */
+#featured .course .img {
     position: relative;
 }
 
-
-.featured-courses .course .img .price-tag {
-    background-color: white;
-    width: 50px;
-    text-align: center;
-    color: var(--accent-color);
-    border-radius: 10px;
-    position: absolute;
-    right: 20px;
-    top: 82%;
-    padding: 7px;
-}
-
-
-.featured-courses #course2 {
-    grid-column: 2/3;
-    grid-row: 1/3;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    /* padding: 23px 0; */
-}
-
-.featured-courses #course2 .img img {
+#featured .course .img img {
     width: 100%;
-    height: 270px;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-
-#featured .img img {
-    width: 350px;
-    height: 100%;
+#featured .price-tag {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #ffffff;
+    color: #1f2937;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Course content */
 #featured .text {
-    margin: 10px;
-    color: var(--secondary-color);
+    padding: 20px 25px 30px;
+    text-align: left;
 }
 
-#featured .tutor-img {
-    width: 60px;
-    height: 60px;
-    margin-right: 3px;
+#featured .course .text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111827;
 }
 
-#featured .text img {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
+#featured .text p {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-#featured .tutor-name {
-    padding-left: 5px;
-}
-
+/* Tutor info */
 #featured .tutor {
-    border: 2px solid var(--accent-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    border-radius: 11px;
-    margin: 20px 0;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-bottom: 16px;
 }
 
-#featured .text .btn a {
-    background: linear-gradient(to right, #5BE3EA, var(--accent-color));
-    text-align: center;
-    display: block;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+#featured .tutor-name {
+    
+    /* padding-top: 15px; */
+    
 }
+
+#featured .tutor-name h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+#featured .tutor-name p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+#featured .tutor-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0066D6;
+}
+
+/* Enrol button */
+#featured .btn a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
+    background: linear-gradient(to right, #5BE3EA, #0066D6);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#featured .btn a:hover {
+    box-shadow: 1px 1px 5px #5BE3EA;
+}
+
 
 #why-choose {
     display: flex;
@@ -621,7 +694,7 @@ h1 {
     background-color: whitesmoke;
     margin: auto;
     background: linear-gradient(to right, #5BE3EA, #0066D6);
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 #testimonials h1 {
@@ -646,7 +719,7 @@ h1 {
     height: 200px;
     display: inherit;
     justify-content: space-around;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 .testimonial-card img {
@@ -728,7 +801,7 @@ h1 {
     margin: auto;
     text-align: center;
     background: linear-gradient(to right, #5BE3EA, #0066D6);
-    border-radius: 10px;
+    border-radius: 16px;
     height: 250px;
     color: white;
 }
@@ -1154,8 +1227,8 @@ footer {
     background-color: var(--accent-color);
     display: grid;
     grid-template-columns: repeat(4, 250px);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     justify-content: space-between;
     color: white;
 }
@@ -1270,7 +1343,7 @@ footer .contact a {
         color: white;
         padding-top: 50px;
         text-shadow: white 1px 1px 20px, #0066D6 1px 1px 10px;
-        
+
 
     }
 
@@ -1278,15 +1351,12 @@ footer .contact a {
         color: white;
         text-shadow: white 1px 1px 20px, #0066D6 1px 1px 10px;
     }
+
     .hero>p {
         color: white;
         font-size: 1.2rem;
         margin: 20px 0;
         width: 90%;
-    }
-
-    .hero .hero-buttons {
-        /* margin-top: 10%; */
     }
 
     .hero .hero-buttons a {
@@ -1312,8 +1382,9 @@ footer .contact a {
         margin-left: 15px;
     }
 
-    .hero .hero-buttons #enrol-btn:hover, .hero .hero-buttons a:hover{
-      box-shadow: 1px 1px 10px var(--accent-color);
+    .hero .hero-buttons #enrol-btn:hover,
+    .hero .hero-buttons a:hover {
+        box-shadow: 1px 1px 10px var(--accent-color);
     }
 
     .herod {
@@ -1487,7 +1558,7 @@ footer .contact a {
     #about {
         width: 95%;
         flex-direction: column-reverse;
-        margin: 30px auto;
+        margin: 25px auto;
         padding: 10px;
     }
 
@@ -1557,161 +1628,36 @@ footer .contact a {
 
     }
 
-    #featured {
+    /* #featured {
         width: 95%;
-        margin: 30px auto;
-        /* padding: 10px; */
-        /* background-color: blue; */
-    }
-
-    .featured-courses {
-        grid-template-columns: 370px;
-        grid-template-rows: repeat(3, auto);
-    }
-
-    .featured-courses .course {
-        flex-direction: column;
-        padding: 8px;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: blue;
     }
 
 
-    #featured .img img {
-        width: 350px;
-        height: 100%;
-    }
-
-
-    .featured-courses #course2 {
-        grid-column: 1;
-        grid-row: 1;
-        /* background-color: red; */
-        /* display: flex; */
-        /* flex-direction: column; */
-
-    }
-
-    .featured-courses #course2 .img img {
+    #featured .course .img img {
         width: 100%;
-        height: 100%;
+        height: 250px;
+        display: block;
+        object-fit: cover;
     }
 
-
-    /* 
-
-#featured {
-    max-width: 1200px;
-    width: 95vw;
-    margin: 30px auto;
-    background-color: whitesmoke;
-    padding: 20px;
-    background: linear-gradient(to right, #5BE3EA, #0066D6);
-
-}
-
-.featured-courses {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, 265px);
-    gap: 10px;
-}
-
-.featured-courses .course {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    padding: 10px;
-    background-color: white;
-}
-
-.featured-courses .course .img {
-    position: relative;
-}
-
-
-.featured-courses .course .img .price-tag {
-    background-color: white;
-    width: 50px;
-    text-align: center;
-    color: var(--accent-color);
-    border-radius: 10px;
-    position: absolute;
-    right: 20px;
-    top: 82%;
-    padding: 7px;
-}
-
-
-.featured-courses #course2 {
-    grid-column: 2/3;
-    grid-row: 1/3;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    padding: 23px 0;
-}
-
-.featured-courses #course2 .img img {
-    width: 100%;
-    height: 270px;
-}
-
-
-#featured .img img {
-    width: 350px;
-    height: 100%;
-}
-
-#featured .text {
-    margin: 10px;
-    color: var(--secondary-color);
-}
-
-#featured .tutor-img {
-    width: 60px;
-    height: 60px;
-    margin-right: 3px;
-}
-
-#featured .text img {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-}
-
-#featured .tutor-name {
-    padding-left: 5px;
-}
-
-#featured .tutor {
-    border: 2px solid var(--accent-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    border-radius: 11px;
-    margin: 20px 0;
-}
-
-#featured .text .btn a {
-    background: linear-gradient(to right, #5BE3EA, var(--accent-color));
-    text-align: center;
-    display: block;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-*/
-
-
-
+    #featured .text p {
+        font-size: 15px;
+        color: #374151;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }  */
 
 
     #why-choose {
+        max-width: 1200px;
         width: 95%;
+        margin: auto;
         flex-direction: column;
         align-items: flex-start;
-        padding: 12px 0;
+        padding: 10px;
         /* background-color: red; */
     }
 
@@ -1734,8 +1680,12 @@ footer .contact a {
         align-items: center;
     }
 
-    #testimonials h1{
-        width: 100%;
+   #testimonials {
+        width: 95%;
+    }
+
+    #testimonials h1 {
+        width: 95%;
 
     }
 
@@ -1744,12 +1694,18 @@ footer .contact a {
     }
 
     #faq {
+        text-align: justify;
+        
         height: 550px;
         padding: 10px 0;
         /* background-color: red; */
     }
 
-    #get-started h1{
+    #faq h2{
+        text-align: center;
+    }
+
+    #get-started h1 {
         font-size: 2rem;
     }
 
@@ -2167,7 +2123,9 @@ footer .contact a {
     }
 
 
-    footer .contact, footer .footer-logo ,.footer-links {
+    footer .contact,
+    footer .footer-logo,
+    .footer-links {
         /* background-color: red; */
         text-align: left;
 
